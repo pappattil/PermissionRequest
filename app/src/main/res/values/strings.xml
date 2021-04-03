@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PermissionRequestDemo</string>
+    <string name="phone_number">Phone number</string>
+    <string name="call">Call</string>
+</resources>
