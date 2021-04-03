@@ -13,7 +13,7 @@ import com.schoolandroidexample.permissionrequestdemo.databinding.ActivityMainBi
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     companion object {
         const val REQUEST_CALL_STATE = 1001
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    fun intentCall() {
+    private fun intentCall() {
         requestPermission()
         val uri ="tel:" + binding.etPhone.text
         val intentPackage = Intent(Intent.ACTION_CALL, Uri.parse(uri))
@@ -66,8 +66,6 @@ class MainActivity : AppCompatActivity() {
                     REQUEST_CALL_STATE
                 )
             }
-        } else {
-            // Permission is already granted
         }
     }
     override fun onRequestPermissionsResult(
